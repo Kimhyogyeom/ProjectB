@@ -4,6 +4,7 @@ public class GunBullet : MonoBehaviour
 {
     [SerializeField] private int _bulletDamage = 50;
     [SerializeField] private float _bulletSpeed = 3f;
+    [SerializeField] private DamageTextSpawner _damageTextSpawner;
 
     void Update()
     {
@@ -19,6 +20,8 @@ public class GunBullet : MonoBehaviour
         else if (collision.CompareTag("BreakGround"))
         {
             collision.GetComponent<BreakGroundController>()?.TakeDamage(_bulletDamage);
+            DamageTextSpawner spawner = FindObjectOfType<DamageTextSpawner>();
+            spawner.ShowDamage(_bulletDamage, transform.position);
             this.gameObject.SetActive(false);
         }
     }
