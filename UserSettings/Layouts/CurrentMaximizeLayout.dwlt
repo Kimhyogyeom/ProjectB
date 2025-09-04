@@ -26,7 +26,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 45754
+  controlID: 82339
   draggingID: 0
 --- !u!114 &2
 MonoBehaviour:
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_SerializedViewNames:
   - UnityEditor.DeviceSimulation.SimulatorWindow
   m_SerializedViewValues:
-  - D:\ProjectB\Library\PlayModeViewStates\d4c4638113b47d746b9a53295de33574
+  - D:\ProjectB\Library\PlayModeViewStates\5651fafc9fd16c841b459e544e9e8e66
   m_PlayModeViewName: GameView
   m_ShowGizmos: 0
   m_TargetDisplay: 0
@@ -153,7 +153,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 45755
+  controlID: 82340
   draggingID: 0
 --- !u!114 &4
 MonoBehaviour:
@@ -174,8 +174,8 @@ MonoBehaviour:
     y: 0
     width: 871
     height: 471
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 5}
   m_Panes:
   - {fileID: 5}
@@ -577,9 +577,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.19603708, y: 1.8488158, z: 1170.403}
+    m_Target: {x: -1.4807868, y: -9.343879, z: -0.03559468}
     speed: 2
-    m_Value: {x: -0.19603708, y: 1.8488158, z: 1170.403}
+    m_Value: {x: -1.4807868, y: -9.343879, z: -0.03559468}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -629,9 +629,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 2.4786918
+    m_Target: 6.4401574
     speed: 2
-    m_Value: 2.4786918
+    m_Value: 6.4401574
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -815,9 +815,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: a022feff
-      m_LastClickedID: -122208
-      m_ExpandedIDs: 3e8efeffa0b3feff78d7feff9c3affff7ec3ffff70ccfffffafaffff
+      m_SelectedIDs: 386e0000
+      m_LastClickedID: 28216
+      m_ExpandedIDs: 98f0fcffb406fdffe421fdff9022fdff3e23fdff1024fdffdee5fdffd6eafdffacf3fdffa022feff3e8efeffa0b3feff78d7feff9c3affff7ec3ffff70ccfffffafaffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -912,7 +912,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Ground
+    - Assets/Prefabs
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -920,16 +920,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scripts/Ground
+  - Assets/Prefabs
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\ProjectB
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 66780000
-    m_LastClickedID: 30822
-    m_ExpandedIDs: 000000000c70000080770000ffffff7f
+    m_SelectedIDs: e4930000
+    m_LastClickedID: 37860
+    m_ExpandedIDs: 000000000c70000080770000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -957,7 +957,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000c700000ffffff7f
+    m_ExpandedIDs: 000000000c70000080770000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -982,9 +982,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: a022feff
-    m_LastClickedInstanceID: -122208
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: 386e0000
+    m_LastClickedInstanceID: 28216
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 9ec900004ee600004ae60000682a010050b8010046b901009cb8010000000000903b0300543b0300687e00008276000088760000d0820100a076000058be0300387a0000907a0000107d0000067d0000f47c00001a7d00003c8c00000cc9010040840000d44001005a5501004c780100c6f80000e2f80000bea90000849a00009aab0000aab40000a8b4000054ab0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1037,7 +1037,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 45876
+  controlID: 82447
   draggingID: 0
 --- !u!114 &13
 MonoBehaviour:

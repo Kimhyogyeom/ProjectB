@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class GunBullet : MonoBehaviour
 {
+    [SerializeField] private int _bulletDamage = 50;
     [SerializeField] private float _bulletSpeed = 3f;
 
     void Update()
@@ -13,6 +14,11 @@ public class GunBullet : MonoBehaviour
     {
         if (collision.CompareTag("DeathZone"))
         {
+            this.gameObject.SetActive(false);
+        }
+        else if (collision.CompareTag("BreakGround"))
+        {
+            collision.GetComponent<BreakGroundController>()?.TakeDamage(_bulletDamage);
             this.gameObject.SetActive(false);
         }
     }
