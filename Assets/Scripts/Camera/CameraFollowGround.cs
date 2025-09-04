@@ -13,7 +13,7 @@ public class CameraFollowGround : MonoBehaviour
     {
         if (_targetGround == null) return;
 
-        Vector3 targetPos = new Vector3(transform.position.x, _targetGround.position.y - 1f, transform.position.z);
+        Vector3 targetPos = new Vector3(transform.position.x, _targetGround.position.y - 1.5f, transform.position.z);
 
         transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref _velocity, _smoothTime);
     }
