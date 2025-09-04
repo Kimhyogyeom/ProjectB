@@ -20,7 +20,6 @@ public class GunBullet : MonoBehaviour
         {
             collision.GetComponent<BreakGroundController>()?.TakeDamage(_bulletDamage);
             this.gameObject.SetActive(false);
-            print("11");
         }
     }
 }
