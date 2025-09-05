@@ -61,6 +61,8 @@ public class MinerController : MonoBehaviour
 
             yield return StartCoroutine(MoveToLocalPosition(_endPos.localPosition));
 
+            GameManager.Instance._uiManager.AddGauge(40);
+
             if (_minerDirection == 0)
             {
                 _spriteRenderer.flipX = false;

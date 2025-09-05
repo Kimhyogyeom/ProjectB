@@ -10,11 +10,13 @@ public class BackgroundLooper : MonoBehaviour
 
     private float _backgroundHeight = 9.99f;
 
+
+
     void Update()
     {
         transform.position += Vector3.up * _backgroundSpeed * Time.deltaTime;
 
-        if (_backgrounds[_startIndex].position.y > 11f)
+        if (_backgrounds[_startIndex].position.y > Camera.main.transform.position.y + 11f)
         {
             _backgrounds[_startIndex].localPosition = _backgrounds[_endIndex].localPosition + new Vector3(0f, -_backgroundHeight, 0f);
 
