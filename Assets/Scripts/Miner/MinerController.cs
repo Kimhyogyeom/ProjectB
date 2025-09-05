@@ -30,7 +30,6 @@ public class MinerController : MonoBehaviour
 
             for (int i = 0; i < 3; i++)
             {
-                // Debug.Log("채굴 " + (i + 1));
                 yield return new WaitForSeconds(1f);
             }
 
