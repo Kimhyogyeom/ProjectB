@@ -234,7 +234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 043c18765a595d744af2064d5878b129, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _breakGroundHp: 1350
+  _breakGroundHp: 1500
   _breakGroundHpText: {fileID: 6778154585888445273}
   _boomObject: {fileID: 5956065992677824001}
   _breakGroundCollider: {fileID: 9075519994612380893}

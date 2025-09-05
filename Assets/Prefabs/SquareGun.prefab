@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 4358210605635258905}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.006417914, y: -14.643817, z: 0}
+  m_LocalPosition: {x: -0.006417914, y: -85, z: 0}
   m_LocalScale: {x: 15.263774, y: 2.0964081, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -64,7 +64,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.4391436}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -75,7 +75,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 5.813939, y: 1.8782872}
   m_EdgeRadius: 0
 --- !u!1 &4932035720282510743
 GameObject:
@@ -105,7 +105,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -1.0000001, z: 0}
-  m_LocalScale: {x: 0.07283, y: 1, z: 1}
+  m_LocalScale: {x: 0.010896825, y: 0.15678, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1557462226575454105}
@@ -127,6 +127,9 @@ MonoBehaviour:
   _bulletPrefab: {fileID: 6381031065318575625, guid: f13d7a7f56108474898cb07f704f1469, type: 3}
   _fireRate: 0.2
   _fireStartPoint: {fileID: 1557462226575454105}
+  _spriteA: {fileID: 21300000, guid: 53c94d03941f35241a52d278ad80a93e, type: 3}
+  _spriteB: {fileID: 21300000, guid: 65c074ecba5f49a4f838fe77c171a7f9, type: 3}
+  _gunRenderer: {fileID: 1232526128257630956}
   _bulletPool:
   - {fileID: 5875309742839619196}
   - {fileID: 944251603945994254}
@@ -184,7 +187,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 53c94d03941f35241a52d278ad80a93e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

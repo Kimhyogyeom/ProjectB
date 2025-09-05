@@ -206,8 +206,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15
-  m_fontSizeBase: 15
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -553,8 +553,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.49, y: 0}
-  m_SizeDelta: {x: 149.02, y: 20}
+  m_AnchoredPosition: {x: -2.16, y: 0}
+  m_SizeDelta: {x: 159.01, y: 30.57}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &126888231
 MonoBehaviour:
@@ -2435,8 +2435,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -55.1, y: 0}
-  m_SizeDelta: {x: 20, y: 30}
+  m_AnchoredPosition: {x: -57.18, y: 1.08}
+  m_SizeDelta: {x: 25.5, y: 43.69}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &750482412
 MonoBehaviour:
@@ -2903,7 +2903,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -2.1, y: 86.7}
-  m_SizeDelta: {x: 132.57, y: 34.62}
+  m_SizeDelta: {x: 132.57, y: 46.15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &951153826
 GameObject:
@@ -3822,8 +3822,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.3, y: 0}
-  m_SizeDelta: {x: 28.67, y: 31.11}
+  m_AnchoredPosition: {x: 9.6, y: 0}
+  m_SizeDelta: {x: 33.49, y: 31.11}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1298033126
 MonoBehaviour:
@@ -3845,7 +3845,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lv.00
+  m_text: Lv.1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
   m_sharedMaterial: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
@@ -3872,8 +3872,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10
-  m_fontSizeBase: 10
+  m_fontSize: 12
+  m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4377,8 +4377,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -35.99, y: 0}
-  m_SizeDelta: {x: 40.29, y: 18.72}
+  m_AnchoredPosition: {x: -34.71, y: 0}
+  m_SizeDelta: {x: 42.99, y: 28.61}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1541970576
 MonoBehaviour:
@@ -4631,11 +4631,6 @@ CanvasRenderer:
 --- !u!4 &1673303762 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7525226489963600012, guid: 72329a2e0930c0348928587977b1c30f, type: 3}
-  m_PrefabInstance: {fileID: 6777379267375734235}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &1673303763 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 1232526128257630956, guid: 72329a2e0930c0348928587977b1c30f, type: 3}
   m_PrefabInstance: {fileID: 6777379267375734235}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1886927516
@@ -5346,65 +5341,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1113204384}
     m_Modifications:
-    - target: {fileID: 1232526128257630956, guid: 72329a2e0930c0348928587977b1c30f, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 53c94d03941f35241a52d278ad80a93e, type: 3}
-    - target: {fileID: 1617015547980599253, guid: 72329a2e0930c0348928587977b1c30f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -85
-      objectReference: {fileID: 0}
-    - target: {fileID: 1758520996771888561, guid: 72329a2e0930c0348928587977b1c30f, type: 3}
-      propertyPath: _spriteA
-      value: 
-      objectReference: {fileID: 21300000, guid: 53c94d03941f35241a52d278ad80a93e, type: 3}
-    - target: {fileID: 1758520996771888561, guid: 72329a2e0930c0348928587977b1c30f, type: 3}
-      propertyPath: _spriteB
-      value: 
-      objectReference: {fileID: 21300000, guid: 65c074ecba5f49a4f838fe77c171a7f9, type: 3}
-    - target: {fileID: 1758520996771888561, guid: 72329a2e0930c0348928587977b1c30f, type: 3}
-      propertyPath: _fireRate
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1758520996771888561, guid: 72329a2e0930c0348928587977b1c30f, type: 3}
-      propertyPath: _gunRenderer
-      value: 
-      objectReference: {fileID: 1673303763}
-    - target: {fileID: 3638271663071347353, guid: 72329a2e0930c0348928587977b1c30f, type: 3}
-      propertyPath: m_Size.x
-      value: 5.813939
-      objectReference: {fileID: 0}
-    - target: {fileID: 3638271663071347353, guid: 72329a2e0930c0348928587977b1c30f, type: 3}
-      propertyPath: m_Size.y
-      value: 1.8782872
-      objectReference: {fileID: 0}
-    - target: {fileID: 3638271663071347353, guid: 72329a2e0930c0348928587977b1c30f, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.4391436
-      objectReference: {fileID: 0}
     - target: {fileID: 4932035720282510743, guid: 72329a2e0930c0348928587977b1c30f, type: 3}
       propertyPath: m_Name
       value: SquareGun
-      objectReference: {fileID: 0}
-    - target: {fileID: 5875309742839619196, guid: 72329a2e0930c0348928587977b1c30f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5996768991987937355, guid: 72329a2e0930c0348928587977b1c30f, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 5996768991987937355, guid: 72329a2e0930c0348928587977b1c30f, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7525226489963600012, guid: 72329a2e0930c0348928587977b1c30f, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.010896825
-      objectReference: {fileID: 0}
-    - target: {fileID: 7525226489963600012, guid: 72329a2e0930c0348928587977b1c30f, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.15678
       objectReference: {fileID: 0}
     - target: {fileID: 7525226489963600012, guid: 72329a2e0930c0348928587977b1c30f, type: 3}
       propertyPath: m_LocalPosition.x

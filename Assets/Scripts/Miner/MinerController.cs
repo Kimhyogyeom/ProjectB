@@ -16,6 +16,7 @@ public class MinerController : MonoBehaviour
     [SerializeField] private GameObject _minerAnimObj;
 
     [SerializeField] private GameObject _starObj;
+
     private void Start()
     {
         StartCoroutine(MiningLoop());
@@ -28,12 +29,12 @@ public class MinerController : MonoBehaviour
             if (_minerDirection == 0)
             {
                 _spriteRenderer.flipX = false;
-                yield return StartCoroutine(MoveToPosition(_startPosLeft.position));
+                yield return StartCoroutine(MoveToLocalPosition(_startPosLeft.localPosition));
             }
             else if (_minerDirection == 1)
             {
                 _spriteRenderer.flipX = true;
-                yield return StartCoroutine(MoveToPosition(_startPosRight.position));
+                yield return StartCoroutine(MoveToLocalPosition(_startPosRight.localPosition));
             }
 
             for (int i = 0; i < 4; i++)
@@ -41,14 +42,14 @@ public class MinerController : MonoBehaviour
                 _bodyAnim.SetTrigger("Mine");
                 _minerAnimObj.SetActive(true);
                 _minerAnim.SetTrigger("Mine");
-                // _spriteRenderer.enabled = false;
 
                 yield return new WaitForSeconds(1f);
-                _minerAnimObj.SetActive(false);
-                // _spriteRenderer.enabled = true;
 
+                _minerAnimObj.SetActive(false);
             }
+
             _starObj.SetActive(true);
+
             if (_minerDirection == 0)
             {
                 _spriteRenderer.flipX = true;
@@ -57,7 +58,8 @@ public class MinerController : MonoBehaviour
             {
                 _spriteRenderer.flipX = false;
             }
-            yield return StartCoroutine(MoveToPosition(_endPos.position));
+
+            yield return StartCoroutine(MoveToLocalPosition(_endPos.localPosition));
 
             if (_minerDirection == 0)
             {
@@ -69,18 +71,18 @@ public class MinerController : MonoBehaviour
             }
         }
     }
-
-    private IEnumerator MoveToPosition(Vector3 target)
+    private IEnumerator MoveToLocalPosition(Vector3 targetLocalPos)
     {
-        while (Vector3.Distance(transform.position, target) > 0.01f)
+        while (Vector3.Distance(transform.localPosition, targetLocalPos) > 0.01f)
         {
-            Vector3 dir = (target - transform.position).normalized;
-            transform.Translate(dir * _minerMoveSpeed * Time.deltaTime, Space.World);
+            Vector3 dir = (targetLocalPos - transform.localPosition).normalized;
+            transform.localPosition += dir * _minerMoveSpeed * Time.deltaTime;
             yield return null;
         }
 
-        transform.position = target;
-        if (_starObj.activeSelf == true)
+        transform.localPosition = targetLocalPos;
+
+        if (_starObj.activeSelf)
         {
             _starObj.SetActive(false);
         }
