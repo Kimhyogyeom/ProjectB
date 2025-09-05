@@ -1,12 +1,16 @@
 using TMPro;
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class BreakGroundController : MonoBehaviour
 {
     [SerializeField] private int _breakGroundHp = 1350;
     [SerializeField] private TextMeshProUGUI _breakGroundHpText;
-
+    [SerializeField] private GameObject _boomObject;
+    [SerializeField] private BoxCollider2D _breakGroundCollider;
+    [SerializeField] private GameObject _breakGroundText;
+    [SerializeField] private SpriteRenderer _breakGroundSr;
     private Vector3 _originalScale;
 
     void Awake()
@@ -24,7 +28,7 @@ public class BreakGroundController : MonoBehaviour
 
         if (_breakGroundHp <= 0)
         {
-            gameObject.SetActive(false);
+            GetBoomObject();
         }
     }
 
@@ -48,5 +52,23 @@ public class BreakGroundController : MonoBehaviour
             yield return null;
         }
         transform.localScale = _originalScale;
+    }
+
+    private void GetBoomObject()
+    {
+        _boomObject.SetActive(true);
+        _breakGroundCollider.enabled = false;
+        _breakGroundText.SetActive(false);
+        _breakGroundSr.enabled = false;
+        StartCoroutine(BreakGroundDisable());
+    }
+    private IEnumerator BreakGroundDisable()
+    {
+        yield return new WaitForSeconds(1f);
+        _boomObject.SetActive(false);
+        _breakGroundCollider.enabled = true;
+        _breakGroundText.SetActive(true);
+        gameObject.SetActive(false);
+        _breakGroundSr.enabled = true;
     }
 }
