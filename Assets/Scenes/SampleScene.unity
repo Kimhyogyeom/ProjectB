@@ -863,7 +863,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _breakGroundPrefab: {fileID: 6103784102990451946, guid: b2ce927a4c8b9d5479b121decf471e00, type: 3}
-  _generateCount: 15
+  _generateCount: 30
   _ySpacing: 0.5
 --- !u!4 &151476320
 Transform:
@@ -1349,20 +1349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ef8dae803020ec44a00702998e49c56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gunParentObject: {fileID: 1113204384}
-  _gunGenPos: {fileID: 550773399}
-  _spacing: 0.5
-  _guns:
-  - {fileID: 1858434183}
-  - {fileID: 1026720018}
-  - {fileID: 1633290960}
-  - {fileID: 1573093833}
-  - {fileID: 1997319283}
-  - {fileID: 674136904}
-  - {fileID: 1888060822}
-  - {fileID: 9788931}
-  - {fileID: 1208156135}
-  - {fileID: 1782994742}
+  _deckGunEaPlus: {fileID: 1321748350}
 --- !u!4 &243177669
 Transform:
   m_ObjectHideFlags: 0
@@ -1375,7 +1362,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1321748351}
   m_Father: {fileID: 523102261}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &297607081
@@ -4880,6 +4868,64 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1302466782}
   m_CullTransparentMesh: 1
+--- !u!1 &1321748349
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1321748351}
+  - component: {fileID: 1321748350}
+  m_Layer: 0
+  m_Name: GunEaPlus
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1321748350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321748349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74256a0682ddc034ebaf489ee686c4b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gunParentObject: {fileID: 1113204384}
+  _gunGenPos: {fileID: 550773399}
+  _spacing: 0.5
+  _guns:
+  - {fileID: 1858434183}
+  - {fileID: 1026720018}
+  - {fileID: 1633290960}
+  - {fileID: 1573093833}
+  - {fileID: 1997319283}
+  - {fileID: 674136904}
+  - {fileID: 1888060822}
+  - {fileID: 9788931}
+  - {fileID: 1208156135}
+  - {fileID: 1782994742}
+--- !u!4 &1321748351
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321748349}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 243177669}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1335936912
 GameObject:
   m_ObjectHideFlags: 0
