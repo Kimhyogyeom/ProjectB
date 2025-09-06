@@ -1366,6 +1366,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _deckGunEaPlus: {fileID: 1321748350}
   _deckGunPowerUp: {fileID: 1150177356}
+  _deckMinerSpeed: {fileID: 1024806961}
   _deckMinerProduction: {fileID: 1278402406}
 --- !u!4 &243177669
 Transform:
@@ -1382,6 +1383,7 @@ Transform:
   m_Children:
   - {fileID: 1321748351}
   - {fileID: 1150177355}
+  - {fileID: 1024806960}
   - {fileID: 1278402405}
   m_Father: {fileID: 523102261}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3979,6 +3981,60 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 973733359}
   m_CullTransparentMesh: 1
+--- !u!1 &1024806959
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1024806960}
+  - component: {fileID: 1024806961}
+  m_Layer: 0
+  m_Name: MinerSpeed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1024806960
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024806959}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 243177669}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1024806961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024806959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a55ce5cff4df06488d88551983d42fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _miners:
+  - {fileID: 873564746}
+  - {fileID: 1586668499}
+  - {fileID: 1040610120}
+  - {fileID: 91153665}
+  - {fileID: 1562260742}
+  - {fileID: 152943886}
+  - {fileID: 1164999790}
+  - {fileID: 74322769}
+  _speedIncreasePercent: 0.3
 --- !u!1001 &1026720016
 PrefabInstance:
   m_ObjectHideFlags: 0

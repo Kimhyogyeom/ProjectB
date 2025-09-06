@@ -12,6 +12,7 @@ public class SkillManager : MonoBehaviour
     [SerializeField] private DeckGunPowerUp _deckGunPowerUp;        // 총 데미지 증가 처리
 
     [Header("Miner")]
+    [SerializeField] private DeckMinerSpeed _deckMinerSpeed;            // 광부 스피드
     [SerializeField] private DeckMinerProduction _deckMinerProduction;  // 광부 생산량 증가 처리
 
     /// <summary>
@@ -35,6 +36,15 @@ public class SkillManager : MonoBehaviour
     //──────────────────────────────────────────────────────────────────────
 
     /// <summary>
+    /// 광부 스피드
+    /// </summary>
+    /// <param name="level">카드 레벨</param>
+    public void MinerSpeed(int level)
+    {
+        _deckMinerSpeed.MinerSpeed(level);
+    }
+
+    /// <summary>
     /// 광부 생산량 증가
     /// </summary>
     /// <param name="level">카드 레벨</param>
@@ -42,4 +52,5 @@ public class SkillManager : MonoBehaviour
     {
         _deckMinerProduction.MinerProduction(level);
     }
+
 }

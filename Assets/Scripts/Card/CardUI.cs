@@ -116,7 +116,7 @@ public class CardUI : MonoBehaviour
                 break;
 
             case CardEffectType.MinerSpeed:
-
+                GameManager.Instance._skillManager.MinerSpeed(_level);
                 break;
 
             case CardEffectType.MinerProduction:
