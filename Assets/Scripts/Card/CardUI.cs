@@ -58,7 +58,6 @@ public class CardUI : MonoBehaviour
     {
         if (_data == null) return;
 
-        print("UpdateStarUI");
         if (_level == 0)
         {
             star1.sprite = _data._starLevelUp;

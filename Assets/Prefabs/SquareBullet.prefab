@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44d023d381d27184c930b9734c06185d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bulletDamage: 1000
+  _bulletDamage: 100
   _bulletSpeed: 3
   _damageTextSpawner: {fileID: 0}
 --- !u!212 &153840504807252180

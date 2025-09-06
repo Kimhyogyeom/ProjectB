@@ -44,10 +44,8 @@ public class MinerController : MonoBehaviour
                 _minerAnim.SetTrigger("Mine");
 
                 yield return new WaitForSeconds(1f);
-
-                _minerAnimObj.SetActive(false);
             }
-
+            _minerAnimObj.SetActive(false);
             _starObj.SetActive(true);
 
             if (_minerDirection == 0)

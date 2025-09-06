@@ -16,6 +16,13 @@ public class GunFire : MonoBehaviour
     private float _fireTimer = 0f;
     [SerializeField] private List<GameObject> _bulletPool = new List<GameObject>();
 
+    /// <summary>
+    /// This function is called when the object becomes enabled and active.
+    /// </summary>
+    void OnEnable()
+    {
+        _fireTimer = 0;
+    }
     void Update()
     {
         _fireTimer += Time.deltaTime;
