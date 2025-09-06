@@ -12,7 +12,7 @@ public class DeckGunPowerUp : MonoBehaviour
     [SerializeField] private float _damageIncrease = 1.4f;  // 데미지 증가 배율
 
     /// <summary>
-    /// 총 개수와 레벨에 따라 데미지 증가
+    /// 총 개수 / 레벨에 따라 데미지 증가
     /// </summary>
     /// <param name="level">카드 레벨</param>
     public void GunPowerUp(int level)

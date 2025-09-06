@@ -369,6 +369,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &74322769 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3570820974548733005, guid: 0ed07d059293ea443971ff43e306f011, type: 3}
+  m_PrefabInstance: {fileID: 805215236}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &86658336
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,6 +458,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &91153665 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3570820974548733005, guid: 0ed07d059293ea443971ff43e306f011, type: 3}
+  m_PrefabInstance: {fileID: 1672304245}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &104967932
 GameObject:
   m_ObjectHideFlags: 0
@@ -880,6 +890,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &152943886 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3570820974548733005, guid: 0ed07d059293ea443971ff43e306f011, type: 3}
+  m_PrefabInstance: {fileID: 1278667380}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &156231903
 GameObject:
   m_ObjectHideFlags: 0
@@ -1351,7 +1366,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _deckGunEaPlus: {fileID: 1321748350}
   _deckGunPowerUp: {fileID: 1150177356}
-  _deckMinerProduction: {fileID: 0}
+  _deckMinerProduction: {fileID: 1278402406}
 --- !u!4 &243177669
 Transform:
   m_ObjectHideFlags: 0
@@ -3392,6 +3407,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7492290617854223169, guid: 0ed07d059293ea443971ff43e306f011, type: 3}
   m_PrefabInstance: {fileID: 805215236}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &873564746 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3570820974548733005, guid: 0ed07d059293ea443971ff43e306f011, type: 3}
+  m_PrefabInstance: {fileID: 9220634085647578514}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &876291938
 GameObject:
   m_ObjectHideFlags: 0
@@ -4120,6 +4140,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3272011459561039948, guid: 0ed07d059293ea443971ff43e306f011, type: 3}
   m_PrefabInstance: {fileID: 1037814558}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1040610120 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3570820974548733005, guid: 0ed07d059293ea443971ff43e306f011, type: 3}
+  m_PrefabInstance: {fileID: 1037814558}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1051792325
 GameObject:
   m_ObjectHideFlags: 0
@@ -4614,6 +4639,11 @@ MonoBehaviour:
   - {fileID: 1208156135}
   - {fileID: 1782994742}
   _damageIncrease: 1.4
+--- !u!1 &1164999790 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3570820974548733005, guid: 0ed07d059293ea443971ff43e306f011, type: 3}
+  m_PrefabInstance: {fileID: 1453392167}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1198408242
 GameObject:
   m_ObjectHideFlags: 0
@@ -4959,6 +4989,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32adcb5458a494f4ab6c6da58398cba0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _miners:
+  - {fileID: 873564746}
+  - {fileID: 1586668499}
+  - {fileID: 1040610120}
+  - {fileID: 91153665}
+  - {fileID: 1562260742}
+  - {fileID: 152943886}
+  - {fileID: 1164999790}
+  - {fileID: 74322769}
+  _productionValue: 0.1
 --- !u!1001 &1278667380
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6106,6 +6146,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1541970574}
   m_CullTransparentMesh: 1
+--- !u!1 &1562260742 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3570820974548733005, guid: 0ed07d059293ea443971ff43e306f011, type: 3}
+  m_PrefabInstance: {fileID: 954790864}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1573093831
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6220,6 +6265,11 @@ MonoBehaviour:
   spawnRandomPrefabs: {fileID: 2065942832}
   _levelUpPopup: {fileID: 453487317}
   _animatorTitle: {fileID: 1509407919}
+--- !u!1 &1586668499 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3570820974548733005, guid: 0ed07d059293ea443971ff43e306f011, type: 3}
+  m_PrefabInstance: {fileID: 1252961198}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1633290958
 PrefabInstance:
   m_ObjectHideFlags: 0

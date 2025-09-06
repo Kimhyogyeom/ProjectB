@@ -10,8 +10,8 @@ public class MinerController : MonoBehaviour
     [SerializeField] private Transform _startPosLeft;       // 왼쪽 시작 위치
     [SerializeField] private Transform _startPosRight;      // 오른쪽 시작 위치
     [SerializeField] private Transform _endPos;             // 이동 후 도착 위치
-    [SerializeField] private float _minerMoveSpeed = 2f;    // 이동 속도
-
+    public float _minerMoveSpeed = 2f;      // 이동 속도
+    public float _minerProduction = 40f;    // 생산량
     [SerializeField] private SpriteRenderer _spriteRenderer;    // 광부 스프라이트 렌더러
     [SerializeField] private Animator _bodyAnim;                // 몸통 애니메이터
     [SerializeField] private Animator _minerAnim;               // 광부 애니메이터
@@ -65,7 +65,7 @@ public class MinerController : MonoBehaviour
             yield return StartCoroutine(MoveToLocalPosition(_endPos.localPosition));
 
             // UI 게이지 증가
-            GameManager.Instance._uiManager.AddGauge(40);
+            GameManager.Instance._uiManager.AddGauge(_minerProduction);
 
             // 이동 후 스프라이트 방향 원복
             if (_minerDirection == 0) _spriteRenderer.flipX = false;
