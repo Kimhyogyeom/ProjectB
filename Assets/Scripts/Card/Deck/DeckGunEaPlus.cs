@@ -8,13 +8,13 @@ public class DeckGunEaPlus : MonoBehaviour
     [SerializeField] private Transform _gunParentObject;
     [SerializeField] private Transform _gunGenPos;
     [SerializeField] private float _spacing = 0.2f;
+    [SerializeField] private float _damageReduction = 0.8f;
     [SerializeField] private GameObject[] _guns;
 
     public void GunEaPlus(int level)
     {
         foreach (var gun in _guns)
         {
-            print(gun.gameObject.name);
             gun.SetActive(false);
         }
         int count = Mathf.Min(level + 1, _guns.Length);
@@ -26,9 +26,17 @@ public class DeckGunEaPlus : MonoBehaviour
         {
             if (i < count)
             {
-                _guns[i].SetActive(true);
                 Vector3 offset = new Vector3(startX + i * _spacing, 0f, 0f);
                 _guns[i].transform.position = _gunGenPos.position + offset;
+                _guns[i].SetActive(true);
+
+                // _guns[i].GetComponent<GunBullet>()._bulletDamage *= _damageReduction;
+                List<GameObject> bullets = _guns[i].GetComponent<GunFire>()._bulletPool;
+                foreach (var item in bullets)
+                {
+                    item.GetComponent<GunBullet>()._bulletDamage *= _damageReduction;
+
+                }
             }
             else
             {

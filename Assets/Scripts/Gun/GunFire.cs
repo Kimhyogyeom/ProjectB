@@ -14,11 +14,8 @@ public class GunFire : MonoBehaviour
     [SerializeField] private SpriteRenderer _gunRenderer;
 
     private float _fireTimer = 0f;
-    [SerializeField] private List<GameObject> _bulletPool = new List<GameObject>();
+    public List<GameObject> _bulletPool = new List<GameObject>();
 
-    /// <summary>
-    /// This function is called when the object becomes enabled and active.
-    /// </summary>
     void OnEnable()
     {
         _fireTimer = 0;

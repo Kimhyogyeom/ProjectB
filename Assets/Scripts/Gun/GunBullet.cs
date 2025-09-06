@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class GunBullet : MonoBehaviour
 {
-    [SerializeField] private int _bulletDamage = 50;
+    public float _bulletDamage = 50;
     [SerializeField] private float _bulletSpeed = 3f;
     [SerializeField] private DamageTextSpawner _damageTextSpawner;
 

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 public class BreakGroundController : MonoBehaviour
 {
-    [SerializeField] private int _breakGroundHp = 1350;
+    [SerializeField] private float _breakGroundHp = 1350;
     [SerializeField] private TextMeshProUGUI _breakGroundHpText;
     [SerializeField] private GameObject _boomObject;
     [SerializeField] private BoxCollider2D _breakGroundCollider;
@@ -18,7 +18,7 @@ public class BreakGroundController : MonoBehaviour
         _originalScale = transform.localScale;
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         _breakGroundHp -= damage;
         _breakGroundHpText.text = _breakGroundHp.ToString();

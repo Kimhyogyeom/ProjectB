@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d43e87ac32b9d441a0eeb8c316501c0, type: 3}
   m_Name: CardDataMinerSpeed
   m_EditorClassIdentifier: 
-  _number: 2
+  _number: 4
   _title: Miner
   _description: 
   _description2: Speed + 30%

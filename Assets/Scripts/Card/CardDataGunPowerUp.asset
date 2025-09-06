@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d43e87ac32b9d441a0eeb8c316501c0, type: 3}
-  m_Name: CardDataGunPlus
+  m_Name: CardDataGunPowerUp
   m_EditorClassIdentifier: 
-  _number: 1
+  _number: 2
   _title: Gun
-  _description: Gun + 1
-  _description2: Power - 20%
+  _description: 
+  _description2: Power + 40%
   _image: {fileID: 21300000, guid: 65c074ecba5f49a4f838fe77c171a7f9, type: 3}
   _level: 0
   _starBasic: {fileID: 910685963, guid: a5e645d0b2507ac42807ef8e886f7d45, type: 3}
   _starLevelUp: {fileID: -2134627542, guid: a5e645d0b2507ac42807ef8e886f7d45, type: 3}
-  _effectType: 2
+  _effectType: 1

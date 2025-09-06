@@ -85,6 +85,7 @@ public class CardUI : MonoBehaviour
         switch (_data._effectType)
         {
             case CardEffectType.GunPowerUp:
+                GameManager.Instance._skillManager.GunPowerUp(_level);
                 break;
 
             case CardEffectType.GunEaPlus:
@@ -95,6 +96,7 @@ public class CardUI : MonoBehaviour
                 break;
 
             case CardEffectType.MinerProduction:
+                GameManager.Instance._skillManager.MinerProduction(_level);
                 break;
 
             default:
