@@ -8,6 +8,7 @@ using System.Collections.Generic;
 /// </summary>
 public class BreakGroundController : MonoBehaviour
 {
+    [SerializeField] private GameObject[] _coinObjects;             // 코인
     [SerializeField] private float _breakGroundHp = 1350;           // 바닥 HP   
     [SerializeField] private TextMeshProUGUI _breakGroundHpText;    // HP 텍스트 UI
     [SerializeField] private GameObject _boomObject;                // 파괴 시 나타나는 효과
@@ -75,6 +76,12 @@ public class BreakGroundController : MonoBehaviour
         _breakGroundCollider.enabled = false;   // Collider 해제
         _breakGroundText.SetActive(false);      // 텍스트 비활성화
         _breakGroundSr.enabled = false;         // 스프라이트 비활성화
+
+        foreach (var coin in _coinObjects)
+        {
+            coin.SetActive(true);
+        }
+
         StartCoroutine(BreakGroundDisable());   // 일정 시간 후 다시 활성화
     }
 

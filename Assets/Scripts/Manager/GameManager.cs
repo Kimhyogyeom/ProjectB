@@ -14,6 +14,10 @@ public class GameManager : MonoBehaviour
     public UIManager _uiManager;        // UI 관리
     public LevelManager _levelManager;  // 레벨 관리
 
+    [Header("In Game")]
+    public CoinManager _coinManager;                // 코인 관련
+    public PossessionManager _possessionManager;    // 소지 목록 관련
+
     /// <summary>
     /// 싱글톤 초기화
     /// </summary>

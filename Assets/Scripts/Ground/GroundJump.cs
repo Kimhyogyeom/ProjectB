@@ -4,6 +4,9 @@ using UnityEngine.UI;
 
 public class GroundJump : MonoBehaviour
 {
+    [Header("Component")]
+    [SerializeField] private GroundHp _groundHp;        // 그라운드 Hp 관련 컴포넌트
+
     [Header("UI")]
     [SerializeField] private Button _jumpButton;        // 점프 버튼
     [SerializeField] private Slider _jumpSlider;        // 0 ~ 150 슬라이더
@@ -63,6 +66,8 @@ public class GroundJump : MonoBehaviour
             // 해당 위치 가면 점프 종료
             if (transform.position.y >= _hitJumpTargetY)
             {
+                // Hit
+                _groundHp.TakeDamage();
                 // 히트 중 다시 끄기
                 _isHiting = false;
                 // 코루틴 실행
