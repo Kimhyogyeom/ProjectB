@@ -52,6 +52,10 @@ MonoBehaviour:
   _spriteA: {fileID: 21300000, guid: 53c94d03941f35241a52d278ad80a93e, type: 3}
   _spriteB: {fileID: 21300000, guid: 65c074ecba5f49a4f838fe77c171a7f9, type: 3}
   _gunRenderer: {fileID: 1232526128257630956}
+  _rayDistance: 4
+  _groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
   _bulletPool:
   - {fileID: 5875309742839619196}
   - {fileID: 944251603945994254}

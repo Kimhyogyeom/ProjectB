@@ -28,7 +28,6 @@ public class GroundJump : MonoBehaviour
     private bool _isHiting = false;                     // 그라운드 to 파괴될 그라운드와 충돌
     private float _hitJumpTargetY;                      // 점프 Y축 값
 
-
     /// <summary>
     /// AddListener Setting
     /// </summary>
@@ -80,11 +79,19 @@ public class GroundJump : MonoBehaviour
     /// </summary>    
     IEnumerator SuccessJumpCorutine()
     {
-        // 1초 대기 : 연속 점프 불가하게 하기 위함
+        // 1초 대기 : 연속 점프 방지
         yield return new WaitForSeconds(1f);
 
+        // 슬라이더 값에 따라 버튼 상태 결정
+        while (_jumpSlider.value < 50)
+        {
+            _jumpButtonImg.color = Color.red;
+            _jumpButton.interactable = false;
+            yield return null;
+        }
+
+        // 슬라이더가 50 이상이 되면 버튼 활성화
         _jumpButtonImg.color = Color.white;
-        // 상호작용 키기
         _jumpButton.interactable = true;
     }
 

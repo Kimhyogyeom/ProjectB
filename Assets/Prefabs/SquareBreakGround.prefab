@@ -45,7 +45,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aac7413d46d7d4d4295f7a0455aff627, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _coinGetController: {fileID: 0}
   _riseHeight: 0.4
   _duration: 0.8
   _breakGround: {fileID: 7843179008717591240}
@@ -280,7 +279,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aac7413d46d7d4d4295f7a0455aff627, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _coinGetController: {fileID: 0}
   _riseHeight: 0.4
   _duration: 0.8
   _breakGround: {fileID: 7843179008717591240}
@@ -381,7 +379,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aac7413d46d7d4d4295f7a0455aff627, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _coinGetController: {fileID: 0}
   _riseHeight: 0.4
   _duration: 0.8
   _breakGround: {fileID: 7843179008717591240}
@@ -449,7 +446,7 @@ GameObject:
   - component: {fileID: 1717093698800704203}
   - component: {fileID: 3379918366073922381}
   - component: {fileID: 9075519994612380893}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SquareBreakGround
   m_TagString: BreakGround
   m_Icon: {fileID: 0}
@@ -744,7 +741,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aac7413d46d7d4d4295f7a0455aff627, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _coinGetController: {fileID: 0}
   _riseHeight: 0.4
   _duration: 0.8
   _breakGround: {fileID: 7843179008717591240}

@@ -16,6 +16,10 @@ public class GunFire : MonoBehaviour
     [SerializeField] private Sprite _spriteB;               // 발사 애니메이션 이미지
     [SerializeField] private SpriteRenderer _gunRenderer;   // 총 스프라이트 렌더러
 
+    [Header("Raycast Settings")]
+    [SerializeField] private float _rayDistance = 10f;      // 레이캐스트 거리
+    [SerializeField] private LayerMask _groundLayer;        // BreakGround 전용 레이어
+
     private float _fireTimer = 0f;  // 발사 타이머
     public List<GameObject> _bulletPool = new List<GameObject>();   // 총알 풀
 
@@ -36,8 +40,21 @@ public class GunFire : MonoBehaviour
 
         if (_fireTimer >= _fireRate)
         {
-            GenerateBullet();   // 총알 생성
-            _fireTimer = 0f;    // 타이머 리셋
+            // Raycast
+            RaycastHit2D hit = Physics2D.Raycast(_fireStartPoint.position, Vector2.down, _rayDistance, _groundLayer);
+
+            if (hit.collider != null && hit.collider.CompareTag("BreakGround"))
+            {
+                GameManager.Instance._gameState = GameManager.GameState.Attack;
+                // 총알 생성
+                GenerateBullet();
+            }
+            else
+            {
+                GameManager.Instance._gameState = GameManager.GameState.Ready;
+            }
+            // hit == null & hit collider tag == BreakGround : Timer reset;
+            _fireTimer = 0f;
         }
     }
 
@@ -46,7 +63,8 @@ public class GunFire : MonoBehaviour
     /// </summary>
     void GenerateBullet()
     {
-        StartCoroutine(SwitchSprite()); // 총 발사 애니메이션
+        // 총 발사 Sprite
+        StartCoroutine(SwitchSprite());
 
         // 총알 풀에서 비활성화된 총알을 찾아 재사용
         foreach (GameObject bullet in _bulletPool)
@@ -75,5 +93,16 @@ public class GunFire : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
 
         _gunRenderer.sprite = _spriteA; // 다시 기본 이미지로 복원
+    }
+
+    /// <summary>
+    /// Scene 뷰에서 레이 확인 (에디터 전용)
+    /// </summary>
+    private void OnDrawGizmosSelected()
+    {
+        if (_fireStartPoint == null) return;
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(_fireStartPoint.position, _fireStartPoint.position + Vector3.down * _rayDistance);
     }
 }

@@ -1,5 +1,7 @@
 using UnityEngine;
 
+
+
 /// <summary>
 /// 게임 전반을 관리하는 싱글톤 GameManager
 /// </summary>
@@ -17,6 +19,15 @@ public class GameManager : MonoBehaviour
     [Header("In Game")]
     public CoinManager _coinManager;                // 코인 관련
     public PossessionManager _possessionManager;    // 소지 목록 관련
+
+
+    public enum GameState
+    {
+        None,       // Null
+        Ready,      // 대기
+        Attack,     // 공격
+    }
+    public GameState _gameState = GameState.None;
 
     /// <summary>
     /// 싱글톤 초기화
