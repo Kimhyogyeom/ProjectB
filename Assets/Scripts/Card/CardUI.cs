@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,7 +17,7 @@ public class CardUI : MonoBehaviour
     [SerializeField] private Image star1;                       // 별 UI 1
     [SerializeField] private Image star2;                       // 별 UI 2
     [SerializeField] private Image star3;                       // 별 UI 3
-
+    [SerializeField] private Animator cardAnim;                 // 카드 애니메이터
     private int _level = 0; // 카드 레벨
     private CardData _data; // 카드 데이터 참조
 
@@ -27,6 +28,8 @@ public class CardUI : MonoBehaviour
     {
         // 버튼 클릭 시 레벨 업 이벤트 등록
         _cardButton.onClick.AddListener(OnClickLevelUp);
+        // 카드 타임 스케일에 영향 받지 않게
+        cardAnim.updateMode = AnimatorUpdateMode.UnscaledTime;
     }
 
     /// <summary>
@@ -50,14 +53,24 @@ public class CardUI : MonoBehaviour
     /// </summary>
     public void OnClickLevelUp()
     {
-        LevelUp();
-        ApplyEffect();
+        StartCoroutine(CardClickCorutine());
+    }
+    /// <summary>
+    /// 카드 클릭하면 실행될 코루틴
+    /// </summary>
+    IEnumerator CardClickCorutine()
+    {
+        cardAnim.SetTrigger("Click");
+        yield return new WaitForSecondsRealtime(1.0f);
 
+        // 카드 레벨업
+        LevelUp();
+        // 카드 레벨업 효과 적용
+        ApplyEffect();
         // 카드 UI 정리 및 레벨업 UI 숨김
         transform.parent.GetComponent<SpawnRandomPrefabs>().ClearCards();
         GameManager.Instance._levelManager.HideLevelUpUI();
     }
-
     /// <summary>
     /// 카드 레벨 증가
     /// </summary>
