@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System;
 
 /// <summary>
 /// 데미지 텍스트를 생성하고, 화면에 표시하는 스폰 클래스
@@ -27,7 +28,9 @@ public class DamageTextSpawner : MonoBehaviour
 
         // 텍스트 값 설정
         TextMeshProUGUI tmp = dmgTextObj.GetComponent<TextMeshProUGUI>();
-        tmp.text = damage.ToString();
+
+        // 정수 문자열이 아니기에 Int.Parse 사용 x
+        tmp.text = (Convert.ToInt32(damage)).ToString();
 
         // DamageText 스크립트 실행 (플레이)
         dmgTextObj.GetComponent<DamageText>().Play();
