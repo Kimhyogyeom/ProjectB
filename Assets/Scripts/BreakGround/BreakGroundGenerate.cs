@@ -5,6 +5,7 @@ using UnityEngine;
 /// </summary>
 public class BreakGroundGenerate : MonoBehaviour
 {
+    [SerializeField] private Collider2D _deathZone;         // 데스존
     [SerializeField] private GameObject _breakGroundPrefab; // 생성할 바닥 프리팹
     [SerializeField] private int _generateCount = 5;        // 생성할 바닥 개수
     [SerializeField] private float _ySpacing = 0.5f;        // 바닥 간 Y 간격
@@ -34,6 +35,8 @@ public class BreakGroundGenerate : MonoBehaviour
                 sr.color = (i % 2 == 0) ? color1 : color2;  // 짝수/홀수 색상 구분
                 sr.flipX = (i % 2 != 0);    // 홀수는 좌우 반전
             }
+            Physics2D.IgnoreCollision(_deathZone, breakGround.GetComponent<Collider2D>());
+
         }
     }
 }
