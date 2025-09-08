@@ -36,6 +36,8 @@ public class GunFire : MonoBehaviour
     /// </summary>
     void Update()
     {
+        if (GameManager.Instance._gameState == GameManager.GameState.Stop) return;
+
         _fireTimer += Time.deltaTime;   // 시간 누적
 
         if (_fireTimer >= _fireRate)

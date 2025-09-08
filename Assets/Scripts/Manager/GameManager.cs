@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
         None,       // Null
         Ready,      // 대기
         Attack,     // 공격
+        Stop,       // 끝
     }
     public GameState _gameState = GameState.None;
 

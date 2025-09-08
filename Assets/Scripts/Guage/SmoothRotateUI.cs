@@ -19,6 +19,8 @@ public class SmoothRotateUI : MonoBehaviour
     /// </summary>
     void Update()
     {
+        if (GameManager.Instance._gameState == GameManager.GameState.Stop) return;
+
         // 현재 각도를 방향과 속도에 따라 증가/감소
         _currentAngle += _direction * _angelSpeed * Time.deltaTime;
 

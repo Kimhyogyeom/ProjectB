@@ -18,6 +18,7 @@ public class BackgroundLooper : MonoBehaviour
     /// </summary>
     void Update()
     {
+        if (GameManager.Instance._gameState == GameManager.GameState.Stop) return;
         // 배경 전체를 위로 이동
         transform.position += Vector3.up * _backgroundSpeed * Time.deltaTime;
 

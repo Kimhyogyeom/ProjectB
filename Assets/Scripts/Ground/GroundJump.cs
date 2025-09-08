@@ -41,6 +41,8 @@ public class GroundJump : MonoBehaviour
     /// </summary>
     void Update()
     {
+        if (GameManager.Instance._gameState == GameManager.GameState.Stop) return;
+
         // 점프 판단 여부
         if (_isJumping)
         {
@@ -110,6 +112,8 @@ public class GroundJump : MonoBehaviour
     /// </summary>
     private void OnClickJumpButton()
     {
+        if (GameManager.Instance._gameState == GameManager.GameState.Stop) return;
+
         // 슬라이더 잔량 체크
         if (!_isJumping && _jumpSlider.value >= _jumpCost)
         {

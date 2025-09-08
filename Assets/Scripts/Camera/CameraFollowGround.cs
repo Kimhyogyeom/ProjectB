@@ -17,6 +17,8 @@ public class CameraFollowGround : MonoBehaviour
     /// </summary>
     void LateUpdate()
     {
+        if (GameManager.Instance._gameState == GameManager.GameState.Stop) return;
+
         if (_targetGround == null) return;  // 타겟 없으면 종료
 
         // 카메라 목표 위치 계산 (타겟 Y 기준 - 오프셋)

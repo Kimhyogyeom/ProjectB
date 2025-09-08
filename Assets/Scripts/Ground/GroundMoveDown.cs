@@ -14,6 +14,8 @@ public class GroundMoveDown : MonoBehaviour
     /// </summary>
     void Update()
     {
+        if (GameManager.Instance._gameState == GameManager.GameState.Stop) return;
+
         // 바닥을 아래로 지속 이동
         _groundTr.position += Vector3.down * _downSpeed * Time.deltaTime;
     }

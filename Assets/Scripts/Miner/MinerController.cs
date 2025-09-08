@@ -33,6 +33,12 @@ public class MinerController : MonoBehaviour
     {
         while (true)
         {
+            // 게임이 Stop 상태라면 대기
+            while (GameManager.Instance._gameState == GameManager.GameState.Stop)
+            {
+                yield return null; // 프레임마다 대기
+            }
+
             // 시작 위치로 이동
             if (_minerDirection == 0)
             {
@@ -80,6 +86,10 @@ public class MinerController : MonoBehaviour
     {
         while (Vector3.Distance(transform.localPosition, targetLocalPos) > 0.01f)
         {
+            while (GameManager.Instance._gameState == GameManager.GameState.Stop)
+            {
+                yield return null;
+            }
             Vector3 dir = (targetLocalPos - transform.localPosition).normalized;
             transform.localPosition += dir * _minerMoveSpeed * Time.deltaTime;
             yield return null;
