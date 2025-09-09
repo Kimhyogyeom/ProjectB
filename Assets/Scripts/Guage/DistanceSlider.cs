@@ -8,6 +8,7 @@ using UnityEngine.UI;
 /// </summary>
 public class DistanceSlider : MonoBehaviour
 {
+    [SerializeField] private FinishController _finishController;    // 끝났을 때 컴포넌트
     [SerializeField] private Transform _groundObj;  // 그라운드
     [SerializeField] private Transform _finishObj;  // 피니쉬 그라운드
     [SerializeField] private Slider _gaugeSlider;   // 게이지 슬라이드
@@ -44,7 +45,8 @@ public class DistanceSlider : MonoBehaviour
             _isReached = true;
             _gaugeSlider.value = 1f; // 확실히 1로 고정
             GameManager.Instance._gameState = GameManager.GameState.Stop;
-            print("Finish");
+            // print("Finish");
+            _finishController.GameFinish();
         }
     }
 }
