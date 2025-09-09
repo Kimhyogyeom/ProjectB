@@ -1299,7 +1299,7 @@ MonoBehaviour:
   _distanceSlider: {fileID: 110141488}
   _deathZone: {fileID: 605266426}
   _breakGroundPrefab: {fileID: 6103784102990451946, guid: b2ce927a4c8b9d5479b121decf471e00, type: 3}
-  _generateCount: 1
+  _generateCount: 60
   _ySpacing: 0.5
   _targetObj: {fileID: 3583551050444690727}
 --- !u!4 &151476320
@@ -2477,7 +2477,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1835542690}
-  - {fileID: 2091143621}
   - {fileID: 1721459561}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3487,6 +3486,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 548768549}
+  - component: {fileID: 548768550}
   m_Layer: 0
   m_Name: SceneChange
   m_TagString: Untagged
@@ -3509,6 +3509,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &548768550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548768548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49a2eb7af77ba7a4d94549a0211e4a84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &550291502
 GameObject:
   m_ObjectHideFlags: 0
@@ -11729,41 +11741,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d9b27874b8260e847bd6fe5756700299, type: 2}
   _spawnCount: 3
   _spawnDelay: 0.5
---- !u!1 &2091143620
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2091143621}
-  m_Layer: 5
-  m_Name: LobbyScene
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2091143621
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2091143620}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 373562658}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2099360010
 GameObject:
   m_ObjectHideFlags: 0

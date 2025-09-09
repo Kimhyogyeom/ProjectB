@@ -3,6 +3,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// 코인 가져오기
+/// </summary>
 public class FinishGetCoin : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI coinText;  // 코인 표시할 UI Text
@@ -14,6 +17,11 @@ public class FinishGetCoin : MonoBehaviour
         StartCoroutine(GetCoinCorutine(coin));
     }
 
+    /// <summary>
+    /// 0 ~ targetCoin까지 duration시간 내 순차적 상승 연출
+    /// </summary>
+    /// <param name="targetCoin"></param>
+    /// <returns></returns>
     IEnumerator GetCoinCorutine(float targetCoin)
     {
         float current = 0f;
