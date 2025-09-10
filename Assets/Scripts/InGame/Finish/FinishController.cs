@@ -12,6 +12,8 @@ public class FinishController : MonoBehaviour
     [SerializeField] private GameObject _sliceObj;      // 슬라이드 UI
     [SerializeField] private GameObject _finishObj;     // reward UI
 
+    [SerializeField] private Animator _finishDoorAnim;
+
     /// <summary>
     /// AddListener Setting
     /// </summary>
@@ -32,5 +34,11 @@ public class FinishController : MonoBehaviour
     public void OnClickEnterButton()
     {
         _sliceObj.SetActive(true);
+        StartCoroutine(SceneToLobbyCorutine());
+    }
+    IEnumerator SceneToLobbyCorutine()
+    {
+        yield return new WaitForSecondsRealtime(1.0f);
+        UITransition.Instance.SetSliceOpen("Lobby");
     }
 }
