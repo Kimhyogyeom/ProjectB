@@ -33,10 +33,10 @@ public class FinishController : MonoBehaviour
     /// </summary>
     public void OnClickEnterButton()
     {
-        _sliceObj.SetActive(true);
-        StartCoroutine(SceneToLobbyCorutine());
+        UITransition.Instance.CloseSlice();
+        StartCoroutine(GameToLobbyCorutine());
     }
-    IEnumerator SceneToLobbyCorutine()
+    IEnumerator GameToLobbyCorutine()
     {
         yield return new WaitForSecondsRealtime(1.0f);
         UITransition.Instance.SetSliceOpen("Lobby");

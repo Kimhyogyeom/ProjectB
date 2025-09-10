@@ -13,7 +13,7 @@ public class FinishGetCoin : MonoBehaviour
 
     public void GetCoinRewardText()
     {
-        float coin = GameManager.Instance._possessionManager._inGameCoin;
+        float coin = PossessionManager.Instance._inGameCoin;
         StartCoroutine(GetCoinCorutine(coin));
     }
 

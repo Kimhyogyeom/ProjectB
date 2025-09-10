@@ -32,6 +32,22 @@ public class UITransition : MonoBehaviour
     }
 
     /// <summary>
+    /// 슬라이스 오픈
+    /// </summary>
+    public void OpenSlice()
+    {
+        _doorAnim.SetTrigger("Open");
+    }
+
+    /// <summary>
+    /// 슬라이스 클로즈
+    /// </summary>
+    public void CloseSlice()
+    {
+        _doorAnim.SetTrigger("Close");
+    }
+
+    /// <summary>
     /// 슬라이드 Open Setting
     /// </summary>
     public void SetSliceOpen(string sceneName)
