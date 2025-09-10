@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 /// <summary>
@@ -12,19 +13,16 @@ public class PossessionManager : MonoBehaviour
     // 싱글톤 인스턴스
     public static PossessionManager Instance = null;
 
-    /// <summary>
-    /// 싱글톤 초기화
-    /// </summary>
     private void Awake()
     {
-        if (Instance == null)
+        // 싱글톤 처리 : 중복 오브젝트 삭제
+        if (Instance != null)
         {
-            Instance = this;
+            Destroy(gameObject);
+            return;
         }
-        else
-        {
-            // 이미 존재하면 중복 제거
-            Destroy(this.gameObject);
-        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject); // 씬 전환 시 유지
     }
 }

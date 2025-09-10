@@ -12,9 +12,16 @@ public class CoinManager : MonoBehaviour
 
     private float _gainCoinValue = 2.0f;
 
+    public float _currentCoin = 0f;
+
     public void GetCoin()
     {
-        float coin = PossessionManager.Instance._inGameCoin += _gainCoinValue;
-        _cointText.text = Convert.ToInt32(coin).ToString();
+        _currentCoin += _gainCoinValue;
+        _cointText.text = Convert.ToInt32(_currentCoin).ToString();
+        PossessionManager.Instance._inGameCoin += _gainCoinValue;
+
+        // PossessionManager.Instance._inGameCoin += _currentCoin;
+        // print("xx");
+        // print(PossessionManager.Instance._inGameCoin);
     }
 }

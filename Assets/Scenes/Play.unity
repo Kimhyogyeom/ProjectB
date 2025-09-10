@@ -5022,6 +5022,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 018466e917ee0ba46b047d5cafbe3349, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _coinManager: {fileID: 1614483715}
   coinText: {fileID: 732183911}
   duration: 1
 --- !u!95 &867699419
@@ -9795,6 +9796,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _cointText: {fileID: 794846093}
+  _currentCoin: 0
 --- !u!1001 &1633290958
 PrefabInstance:
   m_ObjectHideFlags: 0

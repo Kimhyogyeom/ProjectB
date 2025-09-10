@@ -8,12 +8,15 @@ using UnityEngine.UI;
 /// </summary>
 public class FinishGetCoin : MonoBehaviour
 {
+    [Header("Component")]
+    [SerializeField] private CoinManager _coinManager;
+
+    [Header("Setting Value")]
     [SerializeField] private TextMeshProUGUI coinText;  // 코인 표시할 UI Text
     [SerializeField] private float duration = 1.0f;     // 애니메이션 시간
-
     public void GetCoinRewardText()
     {
-        float coin = PossessionManager.Instance._inGameCoin;
+        float coin = _coinManager._currentCoin;
         StartCoroutine(GetCoinCorutine(coin));
     }
 
