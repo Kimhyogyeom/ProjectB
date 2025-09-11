@@ -9,7 +9,6 @@ using UnityEngine.UI;
 public class StartButton : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _staminaText;
-    [SerializeField] private int _needStamina = 5;
 
     [SerializeField] private Button _startButton;
     [SerializeField] private Animator _sliceAnimator;
