@@ -8,11 +8,11 @@ using UnityEngine;
 public class CoinManager : MonoBehaviour
 {
 
-    [SerializeField] private TextMeshProUGUI _cointText;
+    [SerializeField] private TextMeshProUGUI _cointText;    // 코인 텍스트 (Game)
 
-    private float _gainCoinValue = 2.0f;
+    private float _gainCoinValue = 2.0f;    // + 코인 Value
 
-    public float _currentCoin = 0f;
+    public float _currentCoin = 0f;         // 현재 코인 값
 
     public void GetCoin()
     {

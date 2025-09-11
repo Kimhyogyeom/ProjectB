@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,8 +8,10 @@ using UnityEngine.UI;
 /// </summary>
 public class StartButton : MonoBehaviour
 {
-    [SerializeField] private Button _startButton;
+    [SerializeField] private TextMeshProUGUI _staminaText;
+    [SerializeField] private int _needStamina = 5;
 
+    [SerializeField] private Button _startButton;
     [SerializeField] private Animator _sliceAnimator;
 
     /// <summary>
@@ -20,7 +23,13 @@ public class StartButton : MonoBehaviour
     }
     private void OnClickStartButton()
     {
+        // 슬라이드 클로즈 : 오픈
         UITransition.Instance.CloseSlice();
+
+        // 스테미너 감소
+        StaminaManager.Instance.Decrease();
+
+        // 코루틴 실행
         StartCoroutine(LobbyToGameCorutine());
     }
     IEnumerator LobbyToGameCorutine()
