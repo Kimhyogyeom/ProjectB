@@ -4,6 +4,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// 세팅 버튼 컨트롤러
+/// </summary>
 public class SettignController : MonoBehaviour
 {
     [Header("Object")]
@@ -33,14 +36,9 @@ public class SettignController : MonoBehaviour
     [SerializeField] private Button _settingCancleButton;   // CancleButton
 
     private bool _bgmBtnActive = true;
-    private bool _currentBgmBtnActive = true;
-
     private bool _sfxBtnActive = true;
-    private bool _currentSfxBtnActive = true;
-
-
     private bool _vibBtnActive = true;
-    private bool _currentVibBtnActive = true;
+
 
     void Awake()
     {
@@ -53,6 +51,23 @@ public class SettignController : MonoBehaviour
 
         _settingSaveButton.onClick.AddListener(OnClickSaveButton);
         _settingCancleButton.onClick.AddListener(OnClickCancleButton);
+    }
+    /// <summary>
+    /// 활성화 될 때
+    /// </summary>
+    void OnEnable()
+    {
+        StartCoroutine(SetButtonsCorutine());
+    }
+
+    private IEnumerator SetButtonsCorutine()
+    {
+        // Instance가 생성될 때까지 대기
+        yield return new WaitUntil(() => PossessionManager.Instance != null);
+        _bgmBtnActive = SoundManager.Instance._currentBgmBtnActive;
+        _sfxBtnActive = SoundManager.Instance._currentSfxBtnActive;
+        _vibBtnActive = SoundManager.Instance._currentVibBtnActive;
+        ResetBtnState();
     }
     /// <summary>
     /// UI 활성화
@@ -99,9 +114,9 @@ public class SettignController : MonoBehaviour
     private void OnClickSaveButton()
     {
         SoundManager.Instance.OnClickSavebutton();
-        _currentBgmBtnActive = _bgmBtnActive;
-        _currentSfxBtnActive = _sfxBtnActive;
-        _currentVibBtnActive = _vibBtnActive;
+        SoundManager.Instance._currentBgmBtnActive = _bgmBtnActive;
+        SoundManager.Instance._currentSfxBtnActive = _sfxBtnActive;
+        SoundManager.Instance._currentVibBtnActive = _vibBtnActive;
         CloseSettingUI();
     }
     /// <summary>
@@ -110,9 +125,9 @@ public class SettignController : MonoBehaviour
     private void OnClickCancleButton()
     {
         SoundManager.Instance.OnClickCanclebutton();
-        _bgmBtnActive = _currentBgmBtnActive;
-        _sfxBtnActive = _currentSfxBtnActive;
-        _vibBtnActive = _currentVibBtnActive;
+        _bgmBtnActive = SoundManager.Instance._currentBgmBtnActive;
+        _sfxBtnActive = SoundManager.Instance._currentSfxBtnActive;
+        _vibBtnActive = SoundManager.Instance._currentVibBtnActive;
 
         ResetBtnState();
         CloseSettingUI();
@@ -166,7 +181,7 @@ public class SettignController : MonoBehaviour
     }
     private void ResetBtnState()
     {
-        if (!_bgmBtnActive)
+        if (!SoundManager.Instance._currentBgmBtnActive)
         {
             _bgmBtnImg.sprite = _toggleOffImg;
             _bgmToggleText.text = "Off";
@@ -177,7 +192,7 @@ public class SettignController : MonoBehaviour
             _bgmToggleText.text = "On";
         }
 
-        if (!_sfxBtnActive)
+        if (!SoundManager.Instance._currentSfxBtnActive)
         {
             _sfxBtnImg.sprite = _toggleOffImg;
             _sfxToggleText.text = "Off";
@@ -188,7 +203,7 @@ public class SettignController : MonoBehaviour
             _sfxToggleText.text = "On";
         }
 
-        if (!_vibBtnActive)
+        if (!SoundManager.Instance._currentVibBtnActive)
         {
             _vibBtnImg.sprite = _toggleOffImg;
             _vibToggleText.text = "Off";

@@ -1,5 +1,8 @@
 using UnityEngine;
 
+/// <summary>
+/// 사운드 매니저
+/// </summary>
 public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance;
@@ -21,6 +24,10 @@ public class SoundManager : MonoBehaviour
     public bool _vibCtrl = true;
     private bool _currentVibCtrl = true;
 
+    [Header("UI")]
+    public bool _currentBgmBtnActive = true;
+    public bool _currentSfxBtnActive = true;
+    public bool _currentVibBtnActive = true;
 
     private void Awake()
     {

@@ -2,6 +2,9 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// 스테미너 매니저
+/// </summary>
 public class StaminaManager : MonoBehaviour
 {
     public static StaminaManager Instance;
