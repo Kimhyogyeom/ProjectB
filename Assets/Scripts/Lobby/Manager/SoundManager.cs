@@ -44,8 +44,13 @@ public class SoundManager : MonoBehaviour
     {
         if (clip == null) return;
 
-        if (_currentBgmCtrl)
-            _bgmSource.PlayOneShot(clip, volume);
+        // 같은 곡 방지;
+        if (_bgmSource.clip == clip && _bgmSource.isPlaying) return;
+
+        _bgmSource.clip = clip;
+        _bgmSource.volume = volume;
+        // PlayOneShot의 중복 사운드 재생 방지 : Play
+        _bgmSource.Play();
     }
 
     /// <summary>

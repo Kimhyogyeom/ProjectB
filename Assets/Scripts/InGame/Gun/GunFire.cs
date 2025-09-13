@@ -50,6 +50,7 @@ public class GunFire : MonoBehaviour
                 GameManager.Instance._gameState = GameManager.GameState.Attack;
                 // 총알 생성
                 GenerateBullet();
+
             }
             else
             {
@@ -68,6 +69,9 @@ public class GunFire : MonoBehaviour
         // 총 발사 Sprite
         StartCoroutine(SwitchSprite());
 
+        // 총 발사 
+        SoundManager.Instance.PlaySFX(SoundManager.Instance._soundDatabase._playGunFire, 0.3f);
+
         // 총알 풀에서 비활성화된 총알을 찾아 재사용
         foreach (GameObject bullet in _bulletPool)
         {
@@ -83,6 +87,7 @@ public class GunFire : MonoBehaviour
         // 사용 가능한 총알이 없으면 새로 생성 후 풀에 추가
         GameObject newBullet = Instantiate(_bulletPrefab, _fireStartPoint.position, Quaternion.identity);
         _bulletPool.Add(newBullet);
+
     }
 
     /// <summary>

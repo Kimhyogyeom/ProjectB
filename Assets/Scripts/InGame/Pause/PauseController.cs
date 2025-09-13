@@ -6,6 +6,7 @@ public class PauseController : MonoBehaviour
 {
     [SerializeField] private Button _pauseButton;
     [SerializeField] private Button _noButton;
+    [SerializeField] private Button _yesButton;
     [SerializeField] private CanvasGroup[] _canvasImages; // 여러 UI
     [SerializeField] private GameObject _pauseObj;
 
@@ -15,15 +16,29 @@ public class PauseController : MonoBehaviour
     {
         _pauseButton.onClick.AddListener(OnClickPauseButton);
         _noButton.onClick.AddListener(OnClickNoButton);
+        _yesButton.onClick.AddListener(OnClickYesButton);
     }
 
     public void OnClickPauseButton()
     {
+        SoundManager.Instance.PlaySFX(SoundManager.Instance._soundDatabase._settingButtonClick);
         StartCoroutine(CanvasUIHideCoroutine());
     }
     public void OnClickNoButton()
     {
+        SoundManager.Instance.PlaySFX(SoundManager.Instance._soundDatabase._settingButtonClick);
         StartCoroutine(CanvasUIShowCoroutine());
+    }
+    public void OnClickYesButton()
+    {
+        SoundManager.Instance.PlaySFX(SoundManager.Instance._soundDatabase._settingButtonClick);
+        UITransition.Instance.CloseSlice();
+        StartCoroutine(GameToLobbyCorutine());
+    }
+    IEnumerator GameToLobbyCorutine()
+    {
+        yield return new WaitForSecondsRealtime(1.0f);
+        UITransition.Instance.SetSliceOpen("Lobby");
     }
     IEnumerator CanvasUIHideCoroutine()
     {

@@ -114,6 +114,9 @@ public class GroundJump : MonoBehaviour
     {
         if (GameManager.Instance._gameState == GameManager.GameState.Stop) return;
 
+        // 점프
+        SoundManager.Instance.PlaySFX(SoundManager.Instance._soundDatabase._playJump);
+
         // 슬라이더 잔량 체크
         if (!_isJumping && _jumpSlider.value >= _jumpCost)
         {
@@ -135,6 +138,8 @@ public class GroundJump : MonoBehaviour
     {
         _isHiting = true;
         _hitJumpTargetY = transform.position.y + _hitJumpHeight;
+        SoundManager.Instance.PlaySFX(SoundManager.Instance._soundDatabase._playHit);
+        print("Check");
     }
 
     /// <summary>

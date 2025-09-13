@@ -33,6 +33,8 @@ public class FinishController : MonoBehaviour
     /// </summary>
     public void OnClickEnterButton()
     {
+        // 버튼 클릭
+        SoundManager.Instance.PlaySFX(SoundManager.Instance._soundDatabase._settingButtonClick);
         UITransition.Instance.CloseSlice();
         StartCoroutine(GameToLobbyCorutine());
     }

@@ -29,6 +29,10 @@ public class UITransition : MonoBehaviour
     {
         // Canvas를 항상 최상위로 렌더링 : 넉넉하게 10?
         _canvas.sortingOrder = 10;
+        // 스케일 영향 X
+        _doorAnim.updateMode = AnimatorUpdateMode.UnscaledTime;
+        // 비지엠
+        SoundManager.Instance.PlayBGM(SoundManager.Instance._soundDatabase._lobbyBgm);
     }
 
     /// <summary>
@@ -72,5 +76,14 @@ public class UITransition : MonoBehaviour
 
         // 씬 로드 완료되면 Open 애니메이션 전이 조건 실행
         _doorAnim.SetTrigger("Open");
+        if (sceneName == "Lobby")
+        {
+            SoundManager.Instance.PlayBGM(SoundManager.Instance._soundDatabase._lobbyBgm);
+        }
+        else if (sceneName == "Play")
+        {
+            SoundManager.Instance.PlayBGM(SoundManager.Instance._soundDatabase._playBgm);
+        }
+        Time.timeScale = 1;
     }
 }

@@ -12,3 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d38ab84f9ca8de429e1edaf4e243f18, type: 3}
   m_Name: SoundDatabase
   m_EditorClassIdentifier: 
+  _lobbyBgm: {fileID: 8300000, guid: 44ee6b9830b57e94fb51abb42edafd3e, type: 3}
+  _playBgm: {fileID: 8300000, guid: b5cd2341ca655d54088cbe3f7f87595e, type: 3}
+  _playGunFire: {fileID: 8300000, guid: 6a18ce8f7b9329e458cbe345724579c7, type: 3}
+  _playJump: {fileID: 8300000, guid: 0210c024b5e0e8e4da266db205601779, type: 3}
+  _playHit: {fileID: 8300000, guid: aa278f689538ebe44a4d0472257f8055, type: 3}
+  _settingButtonClick: {fileID: 8300000, guid: 02aff7315f62f994da2b818f07b591bc, type: 3}
+  _gameStartButtonClick: {fileID: 8300000, guid: 08a638b7824b7a248bb07d64f584b911, type: 3}

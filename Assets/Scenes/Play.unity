@@ -4327,6 +4327,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pauseButton: {fileID: 973733361}
   _noButton: {fileID: 1444650592}
+  _yesButton: {fileID: 218577559}
   _canvasImages:
   - {fileID: 889591545}
   - {fileID: 660619316}

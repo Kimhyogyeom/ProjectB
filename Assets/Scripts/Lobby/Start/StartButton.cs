@@ -22,6 +22,7 @@ public class StartButton : MonoBehaviour
     }
     private void OnClickStartButton()
     {
+        SoundManager.Instance.PlaySFX(SoundManager.Instance._soundDatabase._gameStartButtonClick);
         // 슬라이드 클로즈 : 오픈
         UITransition.Instance.CloseSlice();
 

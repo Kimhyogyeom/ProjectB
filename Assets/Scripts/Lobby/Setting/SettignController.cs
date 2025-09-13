@@ -74,6 +74,7 @@ public class SettignController : MonoBehaviour
     /// </summary>
     private void OpenSettingUI()
     {
+        SoundManager.Instance.PlaySFX(SoundManager.Instance._soundDatabase._settingButtonClick);
         _settingObj.SetActive(true);
     }
     /// <summary>
@@ -81,6 +82,7 @@ public class SettignController : MonoBehaviour
     /// </summary>
     private void CloseSettingUI()
     {
+        SoundManager.Instance.PlaySFX(SoundManager.Instance._soundDatabase._settingButtonClick);
         _settingObj.SetActive(false);
     }
     /// <summary>
@@ -88,6 +90,7 @@ public class SettignController : MonoBehaviour
     /// </summary>
     private void OnClickBgmButton()
     {
+        SoundManager.Instance.PlaySFX(SoundManager.Instance._soundDatabase._settingButtonClick);
         SoundManager.Instance.BgmToggle();
         BgmBtnState();
     }
@@ -96,6 +99,7 @@ public class SettignController : MonoBehaviour
     /// </summary>
     private void OnClickSfxButton()
     {
+        SoundManager.Instance.PlaySFX(SoundManager.Instance._soundDatabase._settingButtonClick);
         SoundManager.Instance.SfxToggle();
         SfxBtnState();
 
@@ -105,6 +109,7 @@ public class SettignController : MonoBehaviour
     /// </summary>
     private void OnClickVibButton()
     {
+        SoundManager.Instance.PlaySFX(SoundManager.Instance._soundDatabase._settingButtonClick);
         SoundManager.Instance.VibToggle();
         VibBtnState();
     }
