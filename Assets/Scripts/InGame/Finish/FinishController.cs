@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,6 +12,7 @@ public class FinishController : MonoBehaviour
     [SerializeField] private Button _enterBtn;          // 확인 버튼
     [SerializeField] private GameObject _sliceObj;      // 슬라이드 UI
     [SerializeField] private GameObject _finishObj;     // reward UI
+    [SerializeField] private TextMeshProUGUI _finishText;
 
     [SerializeField] private Animator _finishDoorAnim;
 
@@ -26,6 +28,7 @@ public class FinishController : MonoBehaviour
     /// </summary>
     public void GameFinish()
     {
+        _finishText.text = "Stage Clear!";
         _finishObj.SetActive(true);
     }
     /// <summary>

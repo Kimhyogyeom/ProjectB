@@ -903,6 +903,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83d7e49705680e24e955e72ebb63c3dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _gameOverController: {fileID: 1539677581}
   _hpImages:
   - {fileID: 470877397}
   - {fileID: 951153828}
@@ -9183,6 +9184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1539677580}
   - component: {fileID: 1539677579}
+  - component: {fileID: 1539677581}
   m_Layer: 0
   m_Name: FinishController
   m_TagString: Untagged
@@ -9205,6 +9207,7 @@ MonoBehaviour:
   _enterBtn: {fileID: 2099360012}
   _sliceObj: {fileID: 0}
   _finishObj: {fileID: 1675586134}
+  _finishText: {fileID: 1374618040}
   _finishDoorAnim: {fileID: 0}
 --- !u!4 &1539677580
 Transform:
@@ -9221,6 +9224,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1539677581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539677578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e934548955ff1c04281b1c8fe73f8383, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _finishText: {fileID: 1374618040}
+  _finishObj: {fileID: 1675586134}
 --- !u!1 &1541970574
 GameObject:
   m_ObjectHideFlags: 0

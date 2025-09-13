@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class GroundHp : MonoBehaviour
 {
+    [SerializeField] private GameOverController _gameOverController;
     [Header("HP Settings")]
     [SerializeField] private Image[] _hpImages;             // 3개의 이미지
     [SerializeField] private GameObject[] _hpEffectImage;   // 3개의 파괴됐을 때 이미지
@@ -36,8 +37,9 @@ public class GroundHp : MonoBehaviour
 
         if (_currentHp <= 0)
         {
-            Debug.Log("Die");
-            // 로직 작성 예정 Start / End 작업할 때 같이
+            // Debug.Log("Die");
+            // // 로직 작성 예정 Start / End 작업할 때 같이
+            _gameOverController.GameOver();
         }
     }
 
