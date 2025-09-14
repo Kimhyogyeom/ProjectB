@@ -15,6 +15,9 @@ public class SkillManager : MonoBehaviour
     [SerializeField] private DeckMinerSpeed _deckMinerSpeed;            // 광부 스피드
     [SerializeField] private DeckMinerProduction _deckMinerProduction;  // 광부 생산량 증가 처리
 
+    [Header("Drone")]
+    [SerializeField] private DeckDroneEaPlus _deckDroneEaPlus;  // 드론 개수 증가 처리
+
     /// <summary>
     /// 머신건 개수 증가
     /// </summary>
@@ -53,4 +56,14 @@ public class SkillManager : MonoBehaviour
         _deckMinerProduction.MinerProduction(level);
     }
 
+    //──────────────────────────────────────────────────────────────────────
+
+    /// <summary>
+    /// 드론 개수 증가
+    /// </summary>
+    /// <param name="level">카드 레벨</param>
+    public void DroneEaPlus(int level)
+    {
+        _deckDroneEaPlus.DroneEaPlus(level);
+    }
 }

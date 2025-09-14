@@ -136,6 +136,10 @@ public class CardUI : MonoBehaviour
                 GameManager.Instance._skillManager.MinerProduction(_level);
                 break;
 
+            case CardEffectType.DronePlus:
+                GameManager.Instance._skillManager.DroneEaPlus(_level);
+                break;
+
             default:
                 break;
         }

@@ -4,7 +4,7 @@ using UnityEngine;
 /// <summary>
 /// 드론 레이저 컨트롤러
 /// </summary>
-public class DroneLaserController : MonoBehaviour
+public class DroneController : MonoBehaviour
 {
     [Header("Attack Settings")]
     [SerializeField] private Transform _firePoint;              // 레이저 발사 기준 위치 (드론 자식 위치 등)
@@ -82,7 +82,7 @@ public class DroneLaserController : MonoBehaviour
             {
                 if (Time.time >= _lastHitTime + _hitInterval)
                 {
-                    _laserDamage = Random.Range(15, 31);
+                    _laserDamage = Random.Range(30, 51);
                     // 데미지 적용
                     hit.collider.GetComponent<BreakGroundController>()?.TakeDamage(_laserDamage);
 

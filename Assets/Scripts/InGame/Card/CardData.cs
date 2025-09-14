@@ -7,6 +7,7 @@ public enum CardEffectType
     GunEaPlus,          // 건 개수 
     MinerSpeed,         // 광부 스피드
     MinerProduction,    // 광부 생산량
+    DronePlus,          // 드론 개수
 }
 /// <summary>
 /// 카드 ScriptableObject
