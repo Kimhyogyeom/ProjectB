@@ -150,6 +150,12 @@ public class GroundJump : MonoBehaviour
         if (collision.CompareTag("BreakGround") && gameObject == this.gameObject)
         {
             GroundToBreakGroundTrigger();
+            print("11");
+        }
+        if (collision.CompareTag("BreakGroundEnemy") && gameObject == this.gameObject)
+        {
+            GroundToBreakGroundTrigger();
+            print("22");
         }
     }
 }

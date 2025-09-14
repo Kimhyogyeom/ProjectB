@@ -31,7 +31,7 @@ public class DamageTextSpawner : MonoBehaviour
         TextMeshProUGUI tmp = dmgTextObj.GetComponent<TextMeshProUGUI>();
 
         // 정수 문자열이 아니기에 Int.Parse 사용 x
-        tmp.text = (Convert.ToInt32(damage)).ToString();
+        tmp.text = (Mathf.RoundToInt(damage)).ToString();
 
         // DamageText 스크립트 실행 (플레이)
         dmgTextObj.GetComponent<DamageText>().Play();

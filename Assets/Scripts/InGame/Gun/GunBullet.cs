@@ -8,6 +8,7 @@ public class GunBullet : MonoBehaviour
     public float _bulletDamage = 50;                    // 총알 피해량
     [SerializeField] private float _bulletSpeed = 3f;   // 총알 이동 속도
     [SerializeField] private DamageTextSpawner _damageTextSpawner;  // 데미지 텍스트 스포너
+    private BreakGroundEnemy _breakGroundEnemy;
 
     /// <summary>
     /// 총알 이동 (dir = Vector3.down)
@@ -37,6 +38,20 @@ public class GunBullet : MonoBehaviour
             // 데미지 텍스트 표시
             DamageTextSpawner spawner = FindObjectOfType<DamageTextSpawner>();
             spawner.ShowDamage(_bulletDamage, transform.position);
+
+            if (_breakGroundEnemy == null)
+            {
+                if (collision.GetComponent<BreakGroundEnemy>())
+                {
+                    _breakGroundEnemy = collision.GetComponent<BreakGroundEnemy>();
+                    if (!_breakGroundEnemy._isStart)
+                    {
+                        _breakGroundEnemy._isStart = true;
+                        _breakGroundEnemy.ObjectActive();
+                        _breakGroundEnemy.StartCoroutine();
+                    }
+                }
+            }
 
             // 총알 비활성화
             this.gameObject.SetActive(false);

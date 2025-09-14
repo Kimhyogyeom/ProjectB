@@ -70,7 +70,7 @@ public class GunFire : MonoBehaviour
         StartCoroutine(SwitchSprite());
 
         // 총 발사 
-        SoundManager.Instance.PlaySFX(SoundManager.Instance._soundDatabase._playGunFire, 0.3f);
+        SoundManager.Instance.PlaySFX(SoundManager.Instance._soundDatabase._playGunFire, 0.1f);
 
         // 총알 풀에서 비활성화된 총알을 찾아 재사용
         foreach (GameObject bullet in _bulletPool)

@@ -77,7 +77,6 @@ public class CardUI : MonoBehaviour
     private void LevelUp()
     {
         _level++;
-        if (_level > 2) _level = 2; // 최대 레벨 제한
 
         GameManager.Instance._cardManager.SetLevel(_data._number, _level);
 

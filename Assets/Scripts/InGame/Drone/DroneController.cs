@@ -12,6 +12,7 @@ public class DroneController : MonoBehaviour
     [SerializeField] private LayerMask _groundMask;             // 레이저 충돌 검사 대상 레이어
     [SerializeField] private string _targetTag = "BreakGround"; // 레이저 충돌 시 텍스트 호출할 태그
     [SerializeField] private int _laserDamage;                  // 레이저 데미지
+    private int _randmDamage = 200;                  // 레이저 데미지
 
 
     [Header("Laser Visuals")]
@@ -45,6 +46,10 @@ public class DroneController : MonoBehaviour
     {
         while (true)
         {
+            while (GameManager.Instance._gameState == GameManager.GameState.Stop)
+            {
+                yield return null;
+            }
             // 대기 구간 : 레이저 꺼둠
             _lineRenderer.enabled = false;
             yield return new WaitForSeconds(_waitDuration);
@@ -82,7 +87,7 @@ public class DroneController : MonoBehaviour
             {
                 if (Time.time >= _lastHitTime + _hitInterval)
                 {
-                    _laserDamage = Random.Range(30, 51);
+                    _laserDamage = Random.Range(_randmDamage - 20, _randmDamage + 20);
                     // 데미지 적용
                     hit.collider.GetComponent<BreakGroundController>()?.TakeDamage(_laserDamage);
 

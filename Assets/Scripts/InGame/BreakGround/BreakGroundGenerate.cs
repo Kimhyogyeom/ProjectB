@@ -10,8 +10,10 @@ public class BreakGroundGenerate : MonoBehaviour
 
     [SerializeField] private Collider2D _deathZone;         // 데스존
     [SerializeField] private GameObject _breakGroundPrefab; // 생성할 바닥 프리팹
+    [SerializeField] private GameObject _breakGroundEnemyPrefab; // 생성할 바닥 프리팹
     [SerializeField] private int _generateCount = 5;        // 생성할 바닥 개수
     [SerializeField] private float _ySpacing = 0.5f;        // 바닥 간 Y 간격
+    [SerializeField] private BoxCollider2D _deathZoneCollider2D;
 
     [Header("Break Ground Color")]
     private Color _colorWhite = new Color(1f, 1f, 1f);          // 흰색
@@ -29,6 +31,16 @@ public class BreakGroundGenerate : MonoBehaviour
 
         for (int i = 0; i < _generateCount; i++)
         {
+            if (i > 0 && i % 10 == 0)
+            {
+                float yPosition = -(_generateCount - 1 - i) * _ySpacing;
+                Vector3 position = transform.position + new Vector3(0, yPosition, 0);
+
+                GameObject breakGroundEnemyPrefab = Instantiate(_breakGroundEnemyPrefab, position, Quaternion.identity, transform);
+                Physics2D.IgnoreCollision(_deathZoneCollider2D, breakGroundEnemyPrefab.GetComponent<Collider2D>());
+                continue; // 일반 breakGround 생성 건너뛰기
+            }
+
             // 각 바닥의 Y 위치 계산
             float yPos = -(_generateCount - 1 - i) * _ySpacing;
             Vector3 pos = transform.position + new Vector3(0, yPos, 0);

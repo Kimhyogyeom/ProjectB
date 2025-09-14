@@ -43,7 +43,7 @@ public class UIManager : MonoBehaviour
 
         if (_gaugeText != null)
         {
-            _gaugeText.text = $"{_currentGauge}/{_maxGauge}";
+            _gaugeText.text = $"{Mathf.RoundToInt(_currentGauge)}/{Mathf.RoundToInt(_maxGauge)}";
         }
     }
 

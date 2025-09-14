@@ -77,6 +77,8 @@ public class BreakGroundController : MonoBehaviour
         _breakGroundText.SetActive(false);      // 텍스트 비활성화
         _breakGroundSr.enabled = false;         // 스프라이트 비활성화
 
+        this.GetComponent<BreakGroundEnemy>()?.ObjectInActive();
+
         foreach (var coin in _coinObjects)
         {
             coin.SetActive(true);

@@ -1230,8 +1230,10 @@ MonoBehaviour:
   _distanceSlider: {fileID: 110141488}
   _deathZone: {fileID: 605266426}
   _breakGroundPrefab: {fileID: 6103784102990451946, guid: b2ce927a4c8b9d5479b121decf471e00, type: 3}
+  _breakGroundEnemyPrefab: {fileID: 5711451359529075634, guid: 6bacbbebace131b49a07180ba7903458, type: 3}
   _generateCount: 60
   _ySpacing: 0.5
+  _deathZoneCollider2D: {fileID: 605266426}
   _targetObj: {fileID: 3583551050444690727}
 --- !u!4 &151476320
 Transform:
