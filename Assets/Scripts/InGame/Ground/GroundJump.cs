@@ -139,7 +139,7 @@ public class GroundJump : MonoBehaviour
         _isHiting = true;
         _hitJumpTargetY = transform.position.y + _hitJumpHeight;
         SoundManager.Instance.PlaySFX(SoundManager.Instance._soundDatabase._playHit);
-        print("Check");
+        // print("Check");
     }
 
     /// <summary>
