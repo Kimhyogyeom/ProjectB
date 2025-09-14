@@ -42,12 +42,16 @@ public class SpawnRandomPrefabs : MonoBehaviour
             if (anim != null)
                 anim.updateMode = AnimatorUpdateMode.UnscaledTime;
 
-            // 카드 데이터 랜덤 선택
-            int dataIndex = Random.Range(0, _cardDatas.Length);
-            CardData cardData = _cardDatas[dataIndex];
-
-            // 카드 현재 레벨 가져오기
-            int currentLevel = GameManager.Instance._cardManager.GetLevel(cardData._number);
+            // 랜덤 카드 선택, 레벨 3이면 재선택
+            CardData cardData;
+            int currentLevel;
+            do
+            {
+                int dataIndex = Random.Range(0, _cardDatas.Length);
+                cardData = _cardDatas[dataIndex];
+                currentLevel = GameManager.Instance._cardManager.GetLevel(cardData._number);
+            }
+            while (currentLevel >= 3);
 
             // CardUI 세팅
             CardUI cardUI = cardObj.GetComponent<CardUI>();
