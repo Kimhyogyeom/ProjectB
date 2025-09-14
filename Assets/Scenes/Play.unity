@@ -891,7 +891,7 @@ MonoBehaviour:
   _jumpSlider: {fileID: 1001555407}
   _jumpButtonImg: {fileID: 422741337}
   _hitImagObje: {fileID: 572212063}
-  _jumpHeight: 1
+  _jumpHeight: 1.5
   _jumpSpeed: 5
   _jumpCost: 50
   _hitJumpHeight: 2

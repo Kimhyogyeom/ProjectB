@@ -39,19 +39,17 @@ public class GunBullet : MonoBehaviour
             DamageTextSpawner spawner = FindObjectOfType<DamageTextSpawner>();
             spawner.ShowDamage(_bulletDamage, transform.position);
 
-            if (_breakGroundEnemy == null)
+            if (collision.GetComponent<BreakGroundEnemy>())
             {
-                if (collision.GetComponent<BreakGroundEnemy>())
+                _breakGroundEnemy = collision.GetComponent<BreakGroundEnemy>();
+                if (!_breakGroundEnemy._isStart)
                 {
-                    _breakGroundEnemy = collision.GetComponent<BreakGroundEnemy>();
-                    if (!_breakGroundEnemy._isStart)
-                    {
-                        _breakGroundEnemy._isStart = true;
-                        _breakGroundEnemy.ObjectActive();
-                        _breakGroundEnemy.StartCoroutine();
-                    }
+                    _breakGroundEnemy._isStart = true;
+                    _breakGroundEnemy.ObjectActive();
+                    _breakGroundEnemy.StartCoroutine();
                 }
             }
+
 
             // 총알 비활성화
             this.gameObject.SetActive(false);
