@@ -26,17 +26,6 @@ public class Fever : MonoBehaviour
                 // 데미지 텍스트 표시
                 DamageTextSpawner spawner = FindObjectOfType<DamageTextSpawner>();
                 spawner.ShowDamage(_feverDamage, transform.position);
-
-                if (hit.collider.GetComponent<BreakGroundEnemy>())
-                {
-                    _breakGroundEnemy = hit.collider.GetComponent<BreakGroundEnemy>();
-                    if (!_breakGroundEnemy._isStart)
-                    {
-                        _breakGroundEnemy._isStart = true;
-                        _breakGroundEnemy.ObjectActive();
-                        _breakGroundEnemy.StartCoroutine();
-                    }
-                }
             }
         }
     }

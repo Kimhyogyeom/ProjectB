@@ -17,7 +17,7 @@ public class BreakGroundEnemy : MonoBehaviour
 
     public bool _isStart = false;
 
-    public void StartCoroutine()
+    public void BeginAttack()
     {
         StartCoroutine(FillRoutine());
     }
@@ -61,5 +61,12 @@ public class BreakGroundEnemy : MonoBehaviour
             _enemySpriteRenderer.sprite = _idleSprite;
             _enemyBoxCollider2D.enabled = false;
         }
+    }
+    private void OnDisable()
+    {
+        StopAllCoroutines();
+        _fill.fillAmount = 0f;
+        _enemySpriteRenderer.sprite = _idleSprite;
+        _enemyBoxCollider2D.enabled = false;
     }
 }

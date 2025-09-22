@@ -46,7 +46,7 @@ public class GunBullet : MonoBehaviour
                 {
                     _breakGroundEnemy._isStart = true;
                     _breakGroundEnemy.ObjectActive();
-                    _breakGroundEnemy.StartCoroutine();
+                    _breakGroundEnemy.BeginAttack();
                 }
             }
 
