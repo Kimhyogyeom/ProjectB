@@ -32,9 +32,8 @@ public class DroneController : MonoBehaviour
         _lineRenderer.endWidth = 0.1f;      // 끝 지점 두께
     }
 
-    void Start()
+    void OnEnable()
     {
-        // 드론 생성 시 자동 발사 사이클 시작
         StartCoroutine(FireCycleRoutine());
     }
 
@@ -120,5 +119,9 @@ public class DroneController : MonoBehaviour
             Gizmos.color = Color.red;
             Gizmos.DrawLine(_firePoint.position, _firePoint.position + Vector3.down * _maxLaserDistance);
         }
+    }
+    void OnDisable()
+    {
+        StopAllCoroutines();
     }
 }
