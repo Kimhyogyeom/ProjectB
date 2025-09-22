@@ -9,6 +9,7 @@ TagManager:
   - Ground
   - FinishGround
   - BreakGroundEnemy
+  - Fever
   layers:
   - Default
   - TransparentFX

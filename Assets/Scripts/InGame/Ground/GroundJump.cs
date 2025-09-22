@@ -147,15 +147,17 @@ public class GroundJump : MonoBehaviour
     /// </summary>    
     void OnTriggerEnter2D(Collider2D collision)
     {
+
         if (collision.CompareTag("BreakGround") && gameObject == this.gameObject)
         {
             GroundToBreakGroundTrigger();
-            print("11");
+            // print("11");
         }
         if (collision.CompareTag("BreakGroundEnemy") && gameObject == this.gameObject)
         {
             GroundToBreakGroundTrigger();
-            print("22");
+            // print("22");
         }
+
     }
 }

@@ -8,6 +8,7 @@ public class SoundDatabase : ScriptableObject
 
     [Header("Play Scene")]
     public AudioClip _playBgm;
+    public AudioClip _feverBgm;
     public AudioClip _playGunFire;
     public AudioClip _playJump;
     public AudioClip _playHit;

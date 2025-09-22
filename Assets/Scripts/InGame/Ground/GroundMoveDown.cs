@@ -6,7 +6,7 @@ using UnityEngine;
 public class GroundMoveDown : MonoBehaviour
 {
     [Header("Settings")]
-    [SerializeField] private float _downSpeed = 100f;   // 바닥 이동 속도
+    public float _downSpeed = 100f;   // 바닥 이동 속도
     [SerializeField] private Transform _groundTr;       // 이동할 바닥 Transform
 
     /// <summary>
