@@ -4,8 +4,6 @@ public class Fever : MonoBehaviour
 {
     [SerializeField] private float rayDistance = 10f; // 레이 길이
     private int _feverDamage = 99999;
-    private BreakGroundEnemy _breakGroundEnemy;
-
 
     void Update()
     {
